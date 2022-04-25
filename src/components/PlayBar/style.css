@@ -1,0 +1,57 @@
+.PlayBar {
+    width: 194px;
+    height: 44px;
+    border-radius: 10px;
+}
+
+.PlayBarButtons {
+    height: 44px;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+}
+
+.activePlayBarIcon {
+    color: #e30813;
+    cursor: pointer;
+}
+.activePlayBarIcon:hover {
+    color: #ea4334;
+}
+
+.disabledPlayBarIcon {
+    color: #df8d90;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+}
+  
+.tooltip .tooltiptext {
+    user-select: none;
+    top: 35px;
+    left: 35px;
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: "Ubuntu";
+    font-size: small;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

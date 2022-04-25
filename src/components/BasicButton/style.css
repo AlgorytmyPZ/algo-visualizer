@@ -1,0 +1,26 @@
+.BasicDisabledButton{
+    background-color: #dededc;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    opacity: 0.40;
+    user-select: none;
+}
+
+.BasicButton{
+    background-color: #dededc;
+    border-radius: 10px;
+    min-width: 200px;
+    height: 50px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.BasicButton:hover{
+    background-color: #e30813;
+}
+
+.BasicButtonText{
+    cursor: pointer;
+}
