@@ -46,7 +46,7 @@ function StringsearchingPage() {
     }, [pattern, text]);
 
     useEffect(() => {
-        resetPlayBar();
+        resetPlayBar("String-searching");
     }, []);
 
 
@@ -89,7 +89,7 @@ function StringsearchingPage() {
         const algorithmClass = getAlgorithmClass(algorithm);
         const algorithmObj = new algorithmClass(copyCharactersArray(pattern), copyCharactersArray(text));
         algorithmObj.search();
-        resetPlayBar(patternSteps.length, -1);
+        resetPlayBar("String-searching", patternSteps.length, -1);
         // to update PlayBar
         forceUpdate();
     };

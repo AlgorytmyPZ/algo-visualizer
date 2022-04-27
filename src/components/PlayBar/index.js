@@ -15,13 +15,17 @@ let stepsLength = 0;
 let currentStep = 0;
 let firstStep = 0;
 let keyboardLocked = false;
+let algoEnded = false;
+let algoType;
 
-const resetPlayBar = (stepsLengthPassed = 0, firstStepPassed = 0) => {
+const resetPlayBar = (type, stepsLengthPassed = 0, firstStepPassed = 0) => {
+    algoType = type;
     autoplayStopped = false;
     stepsLength = stepsLengthPassed;
     currentStep = firstStepPassed;
     firstStep = firstStepPassed;
     autoplayId++;
+    algoEnded = false;
 }
 
 const setAutoplaySleep = (sleepTimeout) => {
@@ -32,6 +36,11 @@ function PlayBar({setStep, setRunningAutoplay, isDisabled = false}) {
     let [running, setRunning] = useState(false);
     const [prevStepEnabled, setPrevStepEnabled] = useState(false);
     const [nextStepEnabled, setNextStepEnabled] = useState(true);
+
+    if(nextStepEnabled === false && running === false && currentStep !== firstStep && algoEnded === false) {
+        algoEnded = true;
+        window.gtagFunction('event', `${algoType} algorithm finished execution`);
+    }
 
     useEffect(() => {
         setRunningAutoplay(running);

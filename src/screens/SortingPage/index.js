@@ -75,7 +75,7 @@ function SortingPage() {
         const algorithmClass = getAlgorithmClass(algorithm);
         const algorithmObj = new algorithmClass(copyArray(array));
         algorithmObj.sort();
-        resetPlayBar(steps.length);
+        resetPlayBar("Sorting", steps.length);
         // to update PlayBar
         forceUpdate();
     };

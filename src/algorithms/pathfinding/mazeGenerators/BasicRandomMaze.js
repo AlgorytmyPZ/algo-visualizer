@@ -28,7 +28,7 @@ async function BasicRandomMaze (maze, handleFinishGenerating) {
     }
 
     // add pixel art
-    if(Helpers.getRandomInt(10) == 0) {
+    if(Helpers.getRandomInt(7) == 0) {
         let pixelArt = getRandomArt();
         for(let i = 0; i < 5; ++i) {
             if(height >= pixelArt.length && width >= pixelArt[0].length) {
@@ -37,6 +37,7 @@ async function BasicRandomMaze (maze, handleFinishGenerating) {
             pixelArt = getRandomArt();
         }
         if(height >= pixelArt.length && width >= pixelArt[0].length) {
+            window.gtagFunction('event', 'MY EVENT: pixel art generated');
             let iPosition = Helpers.getRandomInt(height - pixelArt.length + 1);
             let jPosition = Helpers.getRandomInt(width - pixelArt[0].length + 1);
             

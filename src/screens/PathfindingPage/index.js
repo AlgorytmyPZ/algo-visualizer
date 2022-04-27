@@ -68,7 +68,7 @@ function PathfindingPage() {
             algorithmObj.setAStar();
         }
         algorithmObj.find();
-        resetPlayBar(steps.length);
+        resetPlayBar("Pathfinding", steps.length);
         // to update PlayBar
         forceUpdate();
     };

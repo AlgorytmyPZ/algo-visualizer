@@ -117,7 +117,7 @@ function TreeBasedPage() {
         const algorithmClass = getAlgorithmClass(algorithm);
         const algorithmObj = new algorithmClass(copyTree(tree), copyArray(array));
         algorithmObj.algorithm();
-        resetPlayBar(treeSteps.length);
+        resetPlayBar("TreeBased", treeSteps.length);
         // to update PlayBar
         forceUpdate();
     }
