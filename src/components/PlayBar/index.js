@@ -39,7 +39,7 @@ function PlayBar({setStep, setRunningAutoplay, isDisabled = false}) {
 
     if(nextStepEnabled === false && running === false && currentStep !== firstStep && algoEnded === false) {
         algoEnded = true;
-        window.gtagFunction('event', `${algoType} algorithm finished execution`);
+        window.gtagFunction('event', `MY EVENT: ${algoType} algorithm finished execution`);
     }
 
     useEffect(() => {
